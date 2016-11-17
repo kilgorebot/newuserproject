@@ -19,3 +19,6 @@ module.exports = (robot) ->
         res.reply "I'm afraid I can't let you do that."
       else
         res.reply "Opening #{doorType} doors"
+
+    robot.respond /(.*) desktop notifications (.*)/i, (res) ->
+      res.reply "desktop notifications are cool"
