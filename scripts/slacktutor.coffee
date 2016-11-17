@@ -20,5 +20,5 @@ module.exports = (robot) ->
       else
         res.reply "Opening #{doorType} doors"
 
-    robot.respond /(.*) desktop notifications (.*)/i, (res) ->
+    robot.respond /(.*)desktop notifications(.*)/i, (res) ->
       res.reply "desktop notifications are cool"
