@@ -23,3 +23,8 @@ module.exports = (robot) ->
     robot.respond /(.*)desktop notifications(.*)/i, (res) ->
       res.reply "desktop notifications are cool"
       res.reply "duhaiuhasdfbuasfhasifbuiahf"
+      
+    robot.respond /(.*)testing features(.*)/i, (res) ->
+      res.reply "ok"
+      res.reply "so what are you doing exactly?"
+      res.reply "894ef3ac23ba45"
