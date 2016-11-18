@@ -21,13 +21,10 @@ module.exports = (robot) ->
         res.reply "Opening #{doorType} doors"
 
     robot.respond /(.*)desktop notifications(.*)/i, (res) ->
-      res.reply "desktop notifications are cool"
-      res.reply "duhaiuhasdfbuasfhasifbuiahf"
+      res.reply "When you enable desktop nofications, a window will pop up in the corner letting you know that there is a new message if you are in a different tab in your browser."
       
-    robot.respond /(.*)testing features(.*)/i, (res) ->
-      res.reply "ok"
-      res.reply "so what are you doing exactly?"
-      res.reply "894ef3ac23ba45"
+    robot.respond /(.*)what are channels(.*)/i, (res) ->
+      res.reply "Channels in slack are a way to organize conversations such as keeping it related to a single topic in that particular channel."
 
-    robot.respond /(.*)give me gibberish(.*)/i, (res) ->
-      res.reply "sjdchijajshfjaehfuihEFIHNSIDFYAUFHIJAFSJGIUARIFJIOJejfirjfijfiueiuehiehgiuehgeirugheuiheuiheuruteurut9834598589ut4ut893tu8u4t8th3h4uith3u4ity74y743yt34ytiu43th34uith344th34ut4oit43ou8t8943ut934tui34thiu34tui4ytui3tyu34htiu3hrui4huirhguirthi8ut4ij"
+    robot.respond /(.*)direct messages(.*)/i, (res) ->
+      res.reply "Direct messages are useful if you want to have a private conversation with someone, it's good if you have lots of people at your company and you don't want to say it in front of everybody."
