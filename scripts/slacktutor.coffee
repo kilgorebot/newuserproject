@@ -29,5 +29,5 @@ module.exports = (robot) ->
       res.reply "so what are you doing exactly?"
       res.reply "894ef3ac23ba45"
 
-    robot.respond /(.*)give me gibberish(.*)i, (res) ->
+    robot.respond /(.*)give me gibberish(.*)/i, (res) ->
       res.reply "sjdchijajshfjaehfuihEFIHNSIDFYAUFHIJAFSJGIUARIFJIOJ"
