@@ -22,3 +22,4 @@ module.exports = (robot) ->
 
     robot.respond /(.*)desktop notifications(.*)/i, (res) ->
       res.reply "desktop notifications are cool"
+      res.reply "duhaiuhasdfbuasfhasifbuiahf"
