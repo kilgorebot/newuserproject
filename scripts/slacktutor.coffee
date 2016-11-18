@@ -30,4 +30,4 @@ module.exports = (robot) ->
       res.reply "894ef3ac23ba45"
 
     robot.respond /(.*)give me gibberish(.*)i, (res) ->
-      res.reply "sjdchijajshfjaehfuihEFIHNSIDFYAUFHIJAFSJGIUARIFJIOJFJIGJIAOIJJAJjifoarjtoiwaejrofmsrmofoiwjriwj474783q84729874ouiej8wurjkleijfioaejfmfjsiljkmfmsdjfoiewjrmklemcomiefdiomesfcioewjfiowesjfoijerfmeoircieviitnveritmo iermtumver8mtoim vermitmui meti remti moii rotiumvmurienytvyenuitcmrumturectue"
+      res.reply "sjdchijajshfjaehfuihEFIHNSIDFYAUFHIJAFSJGIUARIFJIOJ"
