@@ -32,10 +32,4 @@ module.exports = (robot) ->
         #res.reply "Private messages are called direct messages in slack."
         #else
       #res.reply "Direct messages are useful if you want to have a private conversation with someone, it's good if you have lots of people at your company and you don't want to say it in front of everybody."
-
-    robot.respond /open the (.*) doors/i, (res) ->
-      doorType = res.match[1]
-      if doorType is "pod bay"
-        res.reply "I'm afraid I can't let you do that."
-      else
-        res.reply "Opening #{doorType} doors"
+      
