@@ -30,4 +30,5 @@ module.exports = (robot) ->
       messageType = res.match[1]
       if messageType is  " private " 
         res.reply "Private messages are called direct messages in slack."
+        else
       res.reply "Direct messages are useful if you want to have a private conversation with someone, it's good if you have lots of people at your company and you don't want to say it in front of everybody."
