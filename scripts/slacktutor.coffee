@@ -26,12 +26,12 @@ module.exports = (robot) ->
     robot.respond /(.*)what are channel(.*)/i, (res) ->
       res.reply "Channels in slack are a way to organize conversations such as keeping it related to a single topic in that particular channel."
 
-    robot.respond /(.*)messag(.*)/i, (res) ->
-      messageType = res.match[1]
-      if messageType is  " private " 
-        res.reply "Private messages are called direct messages in slack."
-        else
-      res.reply "Direct messages are useful if you want to have a private conversation with someone, it's good if you have lots of people at your company and you don't want to say it in front of everybody."
+    #robot.respond /(.*)messag(.*)/i, (res) ->
+      #messageType = res.match[1]
+      #if messageType is  " private " 
+        #res.reply "Private messages are called direct messages in slack."
+        #else
+      #res.reply "Direct messages are useful if you want to have a private conversation with someone, it's good if you have lots of people at your company and you don't want to say it in front of everybody."
 
     robot.respond /open the (.*) doors/i, (res) ->
       doorType = res.match[1]
