@@ -36,5 +36,5 @@ module.exports = (robot) ->
     robot.respond /(.*) messag(.*)/i, (res) ->
       res.reply "Direct messages are useful if you want to have a private conversation with someone, it's good if you have lots of people at your company and you don't want to say it in front of everybody."
       doorType = res.match[1]
-      if doorType /private/i
+      if doorType is "private"
         res.reply "Private messages are called direct messages in slack."
