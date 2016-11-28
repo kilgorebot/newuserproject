@@ -38,3 +38,6 @@ module.exports = (robot) ->
       doorType = res.match[1]
       if doorType /(.*)private(.*)/i
         res.reply "Private messages are called direct messages in slack."
+        
+    robot.respond /(.*)get notifications (.*) phone/i, (res) ->
+      res.reply "yes, there is a slack app for iOS and Android, if you search in the app store or google play store 'slack', it should be there."
