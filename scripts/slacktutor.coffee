@@ -41,3 +41,6 @@ module.exports = (robot) ->
         
     robot.respond /(.*)get notifications (.*)phone/i, (res) ->
       res.reply "yes, there is a slack app for iOS and Android, if you search in the app store or google play store 'slack', it should be there."
+      
+    robot.respond /(.*)slack app(.*)/i, (res) ->
+      res.reply "yes, there is a slack app for iOS and Android, if you search in the app store or google play store 'slack', it should be there."
