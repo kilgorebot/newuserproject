@@ -16,7 +16,7 @@ module.exports = (robot) ->
   printApiLink = (res)->
     className = res.match[1]
     subClassName = res.match[2]
-    #methodValue = res.match[3]?.replace('#', '')
+    methodValue = res.match[3]?.replace('#', '')
 
     response = "Check out " + docsUrl + className
     response += subClassName if subClassName?
