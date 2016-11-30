@@ -3,10 +3,10 @@
 #
 # Commands:
 #   !api <Class Name>(#methodName optional) - Prints out a link to the Class, or method name mentioned
-#   hubot api <Class Name>(#methodName optional) - Prints out a link to the Class, or method name mentioned
 #
-# Author:
-#   brandonjmckay
+# Authors:
+#   brandonjmcay
+#   iankilgore
 
 module.exports = (robot) ->
   docsUrl = 'http://emberjs.com/api/classes/'
