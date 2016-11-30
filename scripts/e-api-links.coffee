@@ -24,5 +24,5 @@ module.exports = (robot) ->
     response += methodPrefix + methodValue if methodValue?
     res.send response
 
-  robot.hear /^!api (\w*)(\.\w*)?(\#\w*)?/, (res) -> printApiLink(res)
+  #robot.hear /^!api (\w*)(\.\w*)?(\#\w*)?/, (res) -> printApiLink(res)
   #robot.send /^api (\w*)(\.\w*)?(\#\w*)?/, (res) -> printApiLink(res)
