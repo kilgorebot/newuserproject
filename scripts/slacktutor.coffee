@@ -37,7 +37,7 @@ module.exports = (robot) ->
       res.reply "Direct messages are useful if you want to have a private conversation with someone, it's good if you have lots of people at your company and you don't want to say it in front of everybody."
       doorType = res.match[1]
       if doorType /(.*)private(.*)/i
-        res.reply "Private messages are called direct messages in slack."
+      res.reply "Private messages are called direct messages in slack."
         
     robot.respond /(.*)get notifications (.*)phone/i, (res) ->
       res.reply "yes, there is a slack app for iOS and Android, if you search in the app store or google play store 'slack', it should be there."
