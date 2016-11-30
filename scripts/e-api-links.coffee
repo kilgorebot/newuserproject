@@ -25,5 +25,5 @@ module.exports = (robot) ->
     res.send response
 
   #robot.hear /^!api (\w*)(\.\w*)?(\#\w*)?/, (res) -> printApiLink(res)
-  #robot.send /^api (\w*)(\.\w*)?(\#\w*)?/, (res) -> printApiLink(res)
-  robot.hear /lapi (.*)/i, (res) -> printApiLink(res)
+
+  robot.hear /^lapi (\w*)/i, (res) -> printApiLink(res)
