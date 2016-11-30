@@ -45,5 +45,5 @@ module.exports = (robot) ->
     robot.respond /(.*)slack app(.*)/i, (res) ->
       res.reply "yes, there is a slack app for iOS and Android, if you search in the app store or google play store 'slack', it should be there."
 
-    robot.respond /(.*)pin message(.*)/i, (res) ->
+    robot.respond /(.*)pin(.*)message(.*)/i, (res) ->
       res.reply "the way you pin a message is by going to the corner of the message and clicking the three dots icon and then clicking 'pin to [channel name]'"
