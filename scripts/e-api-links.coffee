@@ -15,8 +15,8 @@ module.exports = (robot) ->
 
   printApiLink = (res)->
     className = res.match[1]
-    subClassName = res.match[2]
-    methodValue = res.match[3]?.replace('#', '')
+    #subClassName = res.match[2]
+    #methodValue = res.match[3]?.replace('#', '')
 
     response = "Check out " + docsUrl + className
     response += subClassName if subClassName?
@@ -26,4 +26,4 @@ module.exports = (robot) ->
 
   #robot.hear /^!api (\w*)(\.\w*)?(\#\w*)?/, (res) -> printApiLink(res)
   #robot.send /^api (\w*)(\.\w*)?(\#\w*)?/, (res) -> printApiLink(res)
-  robot.hear /lapi/i, (res) -> printApiLink(res)
+  robot.hear /lapi (.*)/i, (res) -> printApiLink(res)
