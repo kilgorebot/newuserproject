@@ -12,7 +12,7 @@ module.exports = (robot) ->
 
   printApiLink = (res)->
     referenceName = res.match[1]
-    keywordName = res.match[2]?.replace(' ', ''
+    keywordName = res.match[2]?.replace(' ', '')
     propertyOrMethodValue = res.match[3]?.replace('#', '')
 
     response = "Check out " + docsUrl + pagePrefix
