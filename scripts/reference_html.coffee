@@ -15,10 +15,10 @@ module.exports = (robot) ->
     keywordName = res.match[2]
     propertyOrMethodValue = res.match[3]?.replace('#', '')
 
-    response = "Check out " + docsUrl + referenceName
+    response = "Check out " + docsUrl + pagePrefix
     response += keywordName if keywordName?
     response += htmlSuffix
-    response += pagePrefix + propertyOrMethodValue if propertyOrMethodValue?
+
     res.send response
 
-  robot.hear /^lapi (\w*)(\.\w*)?(\#\w*)/i, (res) -> printApiLink(res)
+  robot.hear /!reference (\w*)(\w*)?(\w*)/i, (res) -> printApiLink(res)
