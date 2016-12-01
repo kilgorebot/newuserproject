@@ -21,4 +21,4 @@ module.exports = (robot) ->
 
     res.send response
 
-  robot.hear /!reference (\w*)(\w*)?(\w*)/i, (res) -> printApiLink(res)
+  robot.hear /^!reference (\w*)(\s\w*)?(\w*)/i, (res) -> printApiLink(res)
