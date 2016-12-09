@@ -11,9 +11,7 @@ module.exports = (robot) ->
   pagePrefix = 'tag_'
 
   referenceLink = (res)->
-    #referenceName = res.match[1]
     keywordName = res.match[1]?.replace(' ', '')
-    #propertyOrMethodValue = res.match[3]?.replace('#', '')
 
     response = "Check out " + docsUrl + pagePrefix
     response += keywordName
@@ -21,4 +19,4 @@ module.exports = (robot) ->
 
     res.send response
 
-  robot.hear /^!html <(\w+)?(\s\w*)?(\w*)/i, (res) -> referenceLink(res)
+  robot.hear /^!html <(\w+)/i, (res) -> referenceLink(res)
