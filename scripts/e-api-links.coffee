@@ -26,4 +26,4 @@ module.exports = (robot) ->
 
 
 
-  robot.hear /^!ember (\w*)(\.\w*)?(\.\w*)/i, (res) -> printApiLink(res)
+  robot.hear /^!ember (\w*)?(\.\w*)?(\.\w*)/i, (res) -> printApiLink(res)
