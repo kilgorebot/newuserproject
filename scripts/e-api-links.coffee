@@ -22,7 +22,7 @@ module.exports = (robot) ->
     response += subClassName if subClassName?
     response += htmlSuffix
     response += methodPrefix if methodValue?
-    response += methodValue.match[1] if methodValue?
+    response += methodValue if methodValue?
     res.send response
 
 
