@@ -14,15 +14,15 @@ module.exports = (robot) ->
   methodPrefix = '#method_'
 
   printApiLink = (res)->
+    hasMethod = /(\w)/i.test(res.match[4])
     className = res.match[1]
     subClassName = res.match[2]
-    methodValue = methodPrefix
     methodValue += res.match[4] 
     response = "Check out " + docsUrl + className
     response += subClassName if subClassName?
     response += htmlSuffix
-    #response += methodPrefix if methodValue?
-    response += methodValue if /(\w)/i.test(res.match[4])
+    response += methodPrefix if hasMethod
+    response += methodValue if hasMethod
     res.send response
 
 
