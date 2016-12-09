@@ -2,7 +2,7 @@
 #   Respond to requests for different Ember classes with links from the Ember API
 #
 # Commands:
-#   !api <Class Name>(#methodName optional) - Prints out a link to the Class, or method name mentioned
+#   !ember <Class Name>(#methodName optional) - Prints out a link to the Class, or method name mentioned
 #
 # Authors:
 #   brandonjmcay
@@ -26,4 +26,4 @@ module.exports = (robot) ->
 
 
 
-  robot.hear /^lapi (\w*)(\.\w*)?(\#\w*)/i, (res) -> printApiLink(res)
+  robot.hear /^!ember (\w*)(\.\w*)?(\#\w*)/i, (res) -> printApiLink(res)
