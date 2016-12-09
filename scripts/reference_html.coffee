@@ -2,7 +2,7 @@
 #   Respond to requests for html tag references
 #
 # Commands:
-#   !reference html <tag>
+#   !html html <tag>
 #
 
 module.exports = (robot) ->
@@ -10,15 +10,15 @@ module.exports = (robot) ->
   htmlSuffix = '.asp'
   pagePrefix = 'tag_'
 
-  printApiLink = (res)->
-    referenceName = res.match[1]
-    keywordName = res.match[2]?.replace(' ', '')
-    propertyOrMethodValue = res.match[3]?.replace('#', '')
+  referenceLink = (res)->
+    #referenceName = res.match[1]
+    keywordName = res.match[1]?.replace(' ', '')
+    #propertyOrMethodValue = res.match[3]?.replace('#', '')
 
     response = "Check out " + docsUrl + pagePrefix
-    response += keywordName if keywordName?
+    response += keywordName
     response += htmlSuffix
 
     res.send response
 
-  robot.hear /^!html (\w*)(\s\w*)?(\w*)/i, (res) -> printApiLink(res)
+  robot.hear /^!html <(\w+)?(\s\w*)?(\w*)/i, (res) -> referenceLink(res)
