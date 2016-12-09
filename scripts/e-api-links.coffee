@@ -21,8 +21,8 @@ module.exports = (robot) ->
     response = "Check out " + docsUrl + className
     response += subClassName if subClassName?
     response += htmlSuffix
-    #response += methodPrefix if methodValue?
-    response += methodValue if methodValue?
+    response += methodPrefix if methodValue?
+    response += methodValue.match[1] if methodValue?
     res.send response
 
 
