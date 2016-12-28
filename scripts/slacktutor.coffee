@@ -47,3 +47,6 @@ module.exports = (robot) ->
 
     robot.respond /(.*)pin(.*)message(.*)/i, (res) ->
       res.reply "the way you pin a message is by going to the corner of the message and clicking the three dots icon and then clicking 'pin to [channel name]'"
+
+    robot.respond /(.*)help(.*)/i, (res) ->
+      res.reply "Need help?  To go to the help menu in slack, go to the three dots icon in the upper right hand corner and select 'help' from the pulldown menu."
