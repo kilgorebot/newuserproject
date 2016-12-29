@@ -6,7 +6,7 @@
 #
 
 module.exports = (robot) ->
-  docsUrl = 'http://w3schools.com/tags/'
+  docsUrl = 'http://w3schools.com/css/'
   cssSuffix = '.asp'
   pagePrefix = 'tag_'
 
