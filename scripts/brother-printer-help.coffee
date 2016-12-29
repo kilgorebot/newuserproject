@@ -1,5 +1,7 @@
 # This is where you can get assistance for Brother printers.
-# We are always adding things to the robot.
+# We are always adding things to the robot
+
+module.exports = (robot) ->
 
  robot.respond /(.*)brother DCP 165C(.*)/i, (res) ->
       res.reply "Brother DCP 165C help test"
