@@ -9,8 +9,6 @@ module.exports = (robot) ->
   docsUrl = 'https://regexone.com'
 
   referenceLink = (res)->
-    keywordName = res.match[1]?.replace(' ', '')
-
     response = "Check out " + docsUrl
 
     res.send response
