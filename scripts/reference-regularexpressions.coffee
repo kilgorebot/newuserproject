@@ -6,16 +6,12 @@
 #
 
 module.exports = (robot) ->
-  docsUrl = 'https://regexone.com/lesson'
-  regularExpressionSuffix = '.asp'
-  pagePrefix = 'tag_'
+  docsUrl = 'https://regexone.com'
 
   referenceLink = (res)->
     keywordName = res.match[1]?.replace(' ', '')
 
-    response = "Check out " + docsUrl + pagePrefix
-    response += keywordName
-    response += htmlSuffix
+    response = "Check out " + docsUrl
 
     res.send response
 
