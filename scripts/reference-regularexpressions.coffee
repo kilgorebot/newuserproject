@@ -7,7 +7,7 @@
 
 module.exports = (robot) ->
   docsUrl = 'https://regexone.com/lesson'
-  htmlSuffix = '.asp'
+  regularExpressionSuffix = '.asp'
   pagePrefix = 'tag_'
 
   referenceLink = (res)->
@@ -19,4 +19,4 @@ module.exports = (robot) ->
 
     res.send response
 
-  robot.hear /^!html <(\w+)/i, (res) -> referenceLink(res)
+  robot.hear /^!regularexpression (\w+)/i, (res) -> referenceLink(res)
