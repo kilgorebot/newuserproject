@@ -2,7 +2,7 @@
 #   Respond to requests for html tag references
 #
 # Commands:
-#   !html html <tag>
+#   !regularexpression
 #
 
 module.exports = (robot) ->
@@ -15,4 +15,4 @@ module.exports = (robot) ->
 
     res.send response
 
-  robot.hear /^!regularexpression (\w+)/i, (res) -> referenceLink(res)
+  robot.hear /^!regularexpression ?(.*)/i, (res) -> referenceLink(res)
