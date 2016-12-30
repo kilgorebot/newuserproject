@@ -19,4 +19,4 @@ module.exports = (robot) ->
 
     res.send response
 
-  robot.hear /^!css <(\w+)/i, (res) -> referenceLink(res)
+  robot.hear /^!css (\w+)/i, (res) -> referenceLink(res)
