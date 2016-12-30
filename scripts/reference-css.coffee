@@ -8,7 +8,7 @@
 module.exports = (robot) ->
   docsUrl = 'http://w3schools.com/css/'
   cssSuffix = '.asp'
-  pagePrefix = 'tag_'
+  pagePrefix = 'css_'
 
   referenceLink = (res)->
     keywordName = res.match[1]?.replace(' ', '')
