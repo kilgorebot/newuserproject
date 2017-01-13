@@ -15,7 +15,7 @@
     docsUrl = 'http://www.w3schools.com/jquery/';
     pageSuffix = '.asp';
     pagePrefix = 'event_';
-    referenceLink = function(printedResponse) {
+/*    referenceLink = function(printedResponse) {
       var keywordName, ref, response, helpLink;
       keywordName = (ref = res.match[1]) != null ? ref.replace(' ', '') : void 0;
       helpLink = docsUrl + pagePrefix;
@@ -34,7 +34,7 @@
       robot.hear(/^!jquery (\w*)/i, function(res) {
         return referenceLink(res);
       }
-    }
+    } */
   }
  
 
