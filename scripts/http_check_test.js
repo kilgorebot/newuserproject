@@ -33,7 +33,7 @@
 
         return printedResponse.send(response);
        }
-      robot.hear(/^!jquery (\w*)/i, function(res) {
+      return robot.hear(/^!jquery (\w*)/i, function(res) {
         return referenceLink(res);
       }
     } 
