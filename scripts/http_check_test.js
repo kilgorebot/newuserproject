@@ -33,24 +33,27 @@
 module.exports = function(robot) {
 
   robot.hear(/^!jquery (\w*)/i, function(msg){
-    var docsUrl = 'http://www.w3schools.com/sql/';
+    var docsUrl = 'http://www.w3schools.com/jquery/';
     var pageSuffix = '.asp';
-    var pagePrefix = 'sql_';
+    var pagePrefix = 'event_';
     var referenceLink;
-    referenceLink = function(responseUrl) {
+    referenceLink = function(msg) {
       var keywordName;
       var ref;
-      var response;
-      
+      var responseUrl;
+      keywordName = (ref = msg.match[1]) != null ? ref.replace(' ', '') : void 0;
+      responseUrl = docsUrl + pagePrefix;
+      responseUrl += keywordName;
+      responseUrl += pageSuffix;
+      return msg.send(responseUrl);
     }
     // build the first url to check
-    var helpLink = "http://kilgorei.pairserver.com/";
 	  var http=require('http');
 	  var request =http.get(helpLink, function(response){
 	      if (response.statusCode == 200) {
-          msg.reply(helpLink);
+          msg.reply(referenceLink);
         } else {
-          msg.reply("I'm broken");
+          msg.reply(docsUrl);
         }
       
 	  });
