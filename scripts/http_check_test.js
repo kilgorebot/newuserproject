@@ -12,9 +12,14 @@
 
 module.exports = function(robot) {
   robot.hear(/^!jquery (.*)/i, function(msg){
-	var http=require('http');
-	var request =http.get("http://kilgorei.pairserver.com/fadggf", function(response){
-	      msg.reply(response.statusCode);
+    // build the first url to check
+    var helpLink = "http://kilgorei.pairserver.com/";
+	  var http=require('http');
+	  var request =http.get(helpLink, function(response){
+	      if (response.statusCode == 200) {
+          msg.reply = helpLink;
+        } 
+      
 	  });
 
   });
