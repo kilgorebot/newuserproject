@@ -45,11 +45,11 @@ module.exports = function(robot) {
       responseUrl = docsUrl + pagePrefix;
       responseUrl += keywordName;
       responseUrl += pageSuffix;
-      return msg.send(responseUrl);
+      return (responseUrl);
     }
     // build the first url to check
 	  var http=require('http');
-	  var request =http.get(helpLink, function(response){
+	  var request =http.get(referenceLink, function(response){
 	      if (response.statusCode == 200) {
           msg.reply(referenceLink);
         } else {
@@ -57,6 +57,6 @@ module.exports = function(robot) {
         }
       
 	  });
-
+    return msg.send("hello");
   });
 }
