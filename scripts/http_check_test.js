@@ -17,9 +17,9 @@ module.exports = function(robot) {
 	  var http=require('http');
 	  var request =http.get(helpLink, function(response){
 	      if (response.statusCode == 200) {
-          msg.reply = helpLink;
+          msg.reply(helpLink);
         } else {
-          msg.reply = "I'm broken";
+          msg.reply("I'm broken");
         }
       
 	  });
