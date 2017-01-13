@@ -57,6 +57,6 @@ module.exports = function(robot) {
         }
       
 	  });
-    return msg.send(referenceLink);
+    return msg.send(referenceLink(msg));
   });
 }
