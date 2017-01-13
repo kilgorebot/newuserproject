@@ -30,11 +30,11 @@
           };
 
         return printedResponse.send(response);
-       };
+       }
     return robot.hear(/^!jquery (\w*)/i, function(res) {
       return referenceLink(res);
-      };
-    };
+      }
+    }
   }
  
 
