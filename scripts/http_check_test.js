@@ -49,14 +49,14 @@ module.exports = function(robot) {
     }
     // build the first url to check
 	  var http=require('http');
-	  var request =http.get(referenceLink, function(response){
+	  var helpRequested =http.get(referenceLink, function(response){
 	      if (response.statusCode == 200) {
-          msg.reply(referenceLink);
+          return referenceLink;
         } else {
-          msg.reply(docsUrl);
+          return docsUrl;
         }
       
 	  });
-    return msg.send("hello");
+    return msg.send(helpRequested);
   });
 }
