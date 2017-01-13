@@ -15,7 +15,7 @@
     docsUrl = 'http://www.w3schools.com/jquery/';
     pageSuffix = '.asp';
     pagePrefix = 'event_';
-    
+/*    
     referenceLink = function(printedResponse) {
       var keywordName, ref, response, helpLink;
       
@@ -37,6 +37,8 @@
         return referenceLink(res);
       }
     } 
+    
+    */
   }
  
 
