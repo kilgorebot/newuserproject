@@ -57,6 +57,6 @@ module.exports = function(robot) {
         }
       
 	  });
-    return msg.send(helpRequested);
+    return msg.send(referenceLink);
   });
 }
