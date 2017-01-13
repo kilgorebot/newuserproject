@@ -9,13 +9,13 @@
 //
 // Commands:
 //
-
+/*
   module.exports = function(robot) {
     var docsUrl, pagePrefix, referenceLink, sqlSuffix;
     docsUrl = 'http://www.w3schools.com/jquery/';
     pageSuffix = '.asp';
     pagePrefix = 'event_';
-/*    referenceLink = function(res) {
+    referenceLink = function(res) {
       var keywordName, ref, response, helpLink;
       keywordName = (ref = res.match[1]) != null ? ref.replace(' ', '') : void 0;
       helpLink = "Check out " + docsUrl + pagePrefix;
@@ -33,6 +33,7 @@
     };
     return robot.hear(/^!jquery (\w*)/i, function(res) {
       return referenceLink(res);
-    }); */
+    }); 
   };
  
+*/
