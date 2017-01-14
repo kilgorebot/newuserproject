@@ -53,6 +53,7 @@ module.exports = function(robot) {
           return docsUrl;
         }
       });
+      return helpRequested;
     }
 
     return msg.send(referenceLink(msg));
