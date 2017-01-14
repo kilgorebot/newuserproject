@@ -45,18 +45,16 @@ module.exports = function(robot) {
       responseUrl = docsUrl + pagePrefix;
       responseUrl += keywordName;
       responseUrl += pageSuffix;
-      return (responseUrl);
-    }
-    // build the first url to check
-	  var http=require('http');
-	  var helpRequested =http.get(referenceLink, function(response){
+      var http=require('http');
+	    var helpRequested =http.get(responseUrl, function(response){
 	      if (response.statusCode == 200) {
-          return referenceLink;
+          return responseUrl;
         } else {
           return docsUrl;
         }
-      
-	  });
+      });
+    }
+
     return msg.send(referenceLink(msg));
   });
 }
