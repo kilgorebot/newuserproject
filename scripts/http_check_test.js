@@ -46,17 +46,14 @@ module.exports = function(robot) {
       responseUrl += keywordName;
       responseUrl += pageSuffix;
       var http=require('http');
-	    var helpRequested;
-      helpRequested = function(responseUrl) {
-        http.get(responseUrl, function(response){
-	        if (response.statusCode == 200) {
-            return responseUrl;
-          } else {
-            return docsUrl;
-          }
-        });
-      }
-      return helpRequested;
+	    var helpRequested =http.get(responseUrl, function(response){
+	      if (response.statusCode == 200) {
+          return responseUrl;
+        } else {
+          return docsUrl;
+        }
+      });
+      return responseUrl;
     }
 
     return msg.send(referenceLink(msg));
