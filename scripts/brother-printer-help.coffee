@@ -12,5 +12,5 @@ robot.respond /(.*)brother DCP 165C(.*)/i, (res) ->
     robot.respond /(.*)testing codeshare(.*)/i, (res) ->
       res.reply "it works"
       
-    robot.respond /(.*)testing manual edits(.*)/i, (res) ->
+    robot.respond /(.*)testing manual editing(.*)/i, (res) ->
       res.reply "it works"
