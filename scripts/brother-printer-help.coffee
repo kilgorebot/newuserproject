@@ -6,5 +6,5 @@ module.exports = (robot) ->
   robot.respond /(.*)brother(.*)/i, (res) ->
     res.reply "Brother DCP 165C help test"
       
-#robot.respond /(.*)brother DCP 375CW(.*)/i, (res) ->
-#      res.reply "Brother DCP 375CW help test"
+  robot.respond /(.*)brother DCP 375CW(.*)/i, (res) ->
+    res.reply "Brother DCP 375CW help test"
