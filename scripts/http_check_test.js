@@ -41,6 +41,7 @@ module.exports = function(robot) {
       var keywordName;
       var ref;
       var responseUrl;
+      var validLink;
       keywordName = (ref = msg.match[1]) != null ? ref.replace(' ', '') : void 0;
       responseUrl = docsUrl + pagePrefix;
       responseUrl += keywordName;
@@ -48,13 +49,13 @@ module.exports = function(robot) {
       var http=require('http');
 	    var liveLink =http.get(responseUrl, function(linkData) {
         console.log ("status = " +linkData.statusCode);
-        return linkData.statusCode
+        validLink = linkData.statusCode;
         }
       );
       console.log ("liveLink = " +liveLink);
-      console.log ("liveLink status = " + liveLink.statusCode);
+      console.log ("liveLink status = " + validLink);
       console.log ("responseUrl = " +responseUrl);
-	      if (liveLink.statusCode == 200) {
+	      if (validLink == 200) {
           return responseUrl;
         } else {
           return docsUrl;
