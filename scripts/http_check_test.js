@@ -46,7 +46,9 @@ module.exports = function(robot) {
       responseUrl += keywordName;
       responseUrl += pageSuffix;
       var http=require('http');
-	    var liveLink =http.get(responseUrl)
+	    var liveLink =http.get(responseUrl);
+      console.log (liveLink.statusCode);
+      console.log (responseUrl);
 	      if (liveLink.statusCode == 200) {
           return responseUrl;
         } else {
