@@ -47,7 +47,7 @@ module.exports = function(robot) {
       responseUrl += pageSuffix;
       var http=require('http');
 	    var helpRequested =http.get(responseUrl, function(response){
-	      if (response.statusCode == 200) {
+	      if (response.statusCode == 404) {
           return responseUrl;
         } else {
           return docsUrl;
