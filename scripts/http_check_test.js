@@ -50,16 +50,17 @@ module.exports = function(robot) {
 	    var liveLink =http.get(responseUrl, function(linkData) {
         console.log ("status = " +linkData.statusCode);
         validLink = linkData.statusCode;
+          console.log ("liveLink = " +liveLink);
+          console.log ("liveLink status = " + validLink);
+          console.log ("responseUrl = " +responseUrl);
+	        if (validLink == 200) {
+            return responseUrl;
+          } else {
+            return docsUrl;
+          }
         }
       );
-      console.log ("liveLink = " +liveLink);
-      console.log ("liveLink status = " + validLink);
-      console.log ("responseUrl = " +responseUrl);
-	      if (validLink == 200) {
-          return responseUrl;
-        } else {
-          return docsUrl;
-        }
+
     }
 
     return msg.send(referenceLink(msg));
