@@ -46,11 +46,14 @@ module.exports = function(robot) {
       responseUrl += keywordName;
       responseUrl += pageSuffix;
       var http=require('http');
-	    var liveLink =http.get(responseUrl);
+	    var liveLink =http.get(responseUrl, function(linkData) {
+        var linkStatus = linkData.statusCode
+        }
+      );
       console.log ("liveLink = " +liveLink);
-      console.log ("liveLink status = " +liveLink.statusCode);
+      console.log ("Link status = " +linkStatus);
       console.log ("responseUrl = " +responseUrl);
-	      if (liveLink.statusCode == 200) {
+	      if (linkStatus == 200) {
           return responseUrl;
         } else {
           return docsUrl;
