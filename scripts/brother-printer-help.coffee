@@ -8,9 +8,3 @@ robot.respond /(.*)brother DCP 165C(.*)/i, (res) ->
       
     robot.respond /(.*)brother DCP 375CW(.*)/i, (res) ->
       res.reply "Brother DCP 375CW help test"
-      
-    robot.respond /(.*)testing codeshare(.*)/i, (res) ->
-      res.reply "it works"
-      
-    robot.respond /(.*)testing manual editing(.*)/i, (res) ->
-      res.reply "it works"
