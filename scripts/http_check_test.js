@@ -52,9 +52,9 @@ module.exports = function(robot) {
         }
       );
       console.log ("liveLink = " +liveLink);
-      
+      console.log ("liveLink status = " + liveLink.statusCode);
       console.log ("responseUrl = " +responseUrl);
-	      if (liveLink == 200) {
+	      if (liveLink.statusCode == 200) {
           return responseUrl;
         } else {
           return docsUrl;
