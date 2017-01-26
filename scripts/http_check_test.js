@@ -47,8 +47,8 @@ module.exports = function(robot) {
       responseUrl += pageSuffix;
       var http=require('http');
 	    var liveLink =http.get(responseUrl);
-      console.log (liveLink.statusCode);
-      console.log (responseUrl);
+      console.log ("liveLink = " +liveLink.statusCode);
+      console.log ("responseUrl = " +responseUrl);
 	      if (liveLink.statusCode == 200) {
           return responseUrl;
         } else {
