@@ -47,7 +47,8 @@ module.exports = function(robot) {
       responseUrl += keywordName;
       responseUrl += pageSuffix;
       var http=require('http');
-	    var liveLink =http.get(responseUrl, function(linkData) {
+	    var liveLink =function(test) {
+        http.get(responseUrl, function(linkData) {
         console.log ("status = " +linkData.statusCode);
         validLink = linkData.statusCode;
           console.log ("liveLink = " +liveLink);
@@ -59,6 +60,7 @@ module.exports = function(robot) {
             return docsUrl;
           }
         }
+        }         
       );
 
     }
