@@ -47,6 +47,7 @@ module.exports = function(robot) {
       responseUrl += pageSuffix;
       var http=require('http');
 	    var liveLink =http.get(responseUrl, function(linkData) {
+        console.log ("status = " +linkData.statusCode);
         return linkData.statusCode
         }
       );
