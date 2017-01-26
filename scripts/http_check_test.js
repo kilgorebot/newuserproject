@@ -49,8 +49,8 @@ module.exports = function(robot) {
       var http=require('http');
 	    var liveLink =function(test) {
         http.get(responseUrl, function(linkData) {
-        console.log ("status = " +linkData.statusCode);
-        validLink = linkData.statusCode;
+          console.log ("status = " +linkData.statusCode);
+          validLink = linkData.statusCode;
           console.log ("liveLink = " +liveLink);
           console.log ("liveLink status = " + validLink);
           console.log ("responseUrl = " +responseUrl);
@@ -59,10 +59,8 @@ module.exports = function(robot) {
           } else {
             return docsUrl;
           }
-        }
-        }         
-      );
-
+        });
+      }
     }
 
     return msg.send(referenceLink(msg));
