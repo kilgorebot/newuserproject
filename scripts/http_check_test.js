@@ -47,13 +47,13 @@ module.exports = function(robot) {
       responseUrl += pageSuffix;
       var http=require('http');
 	    var liveLink =http.get(responseUrl, function(linkData) {
-        var linkStatus = linkData.statusCode
+        return linkData.statusCode
         }
       );
       console.log ("liveLink = " +liveLink);
-      console.log ("Link status = " +linkStatus);
+      
       console.log ("responseUrl = " +responseUrl);
-	      if (linkStatus == 200) {
+	      if (liveLink == 200) {
           return responseUrl;
         } else {
           return docsUrl;
