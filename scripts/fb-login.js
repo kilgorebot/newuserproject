@@ -1,4 +1,4 @@
-FB.login(function(response) {
+/*FB.login(function(response) {
     if (response.authResponse) {
      console.log('Welcome!  Fetching your information.... ');
      FB.api('/me', function(response) {
@@ -9,3 +9,4 @@ FB.login(function(response) {
      document.getElementById("demo").innerHTML = FB.login;
     }
 });
+*/
